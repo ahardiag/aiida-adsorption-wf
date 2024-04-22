@@ -1,4 +1,4 @@
-# Equilibration of Charge with `aiida-raspa`
+# aiida-raspa-EQeq
 
 A prototype package to test a screening study on a MOF database using a state-of-the-art calculation : Equilibration of charge in a periodic structure.
 
