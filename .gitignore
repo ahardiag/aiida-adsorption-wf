@@ -1,0 +1,10 @@
+.log_20240325
+__pycache__/*
+cif/
+computer.yml
+example_EQeq.py
+requirements.txt
+reset_database.sql
+run_EQeq_database_seq.py
+submit_test/
+trash/
