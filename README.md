@@ -76,16 +76,14 @@ Sometimes, we need to restart the local database :
 ```
 pg_ctl -D /home/hardiagon/mylocal_db start
 ```
-where we provide after `-D` flag the path to the local database (use `verdi show profile <myprofile>` to retrieve this information).
+where `-D` flag denotes the path to database postgresql settings (by default `$HOME/mylocal_db`) if the database server has been initialized using `initdb -D mylocal_db` (see also [aiida doc](https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/install_conda.html#installation-into-conda-environment)).
 
 To restart the `rabbitmq` server :
 ```
 rabbitmq-server -detached
 ```
-
 To restart the daemon : 
 ```
 verdi daemon start
 ```
-
 Then one can check everything is working with `verdi status`.
