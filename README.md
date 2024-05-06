@@ -68,5 +68,24 @@ verdi run eqeq_raspa_screening.py raspa_run \
     --num_max 80 \
     --verbose 
 ```
-To test the submission on a few structure, one can pass the maximum number of submission with `--num_max`.
+To test the submission on a few structures rather than the whole database, one can pass the maximum number of submission with `--num_max`.
 
+## Aiida troubleshooting
+
+Sometimes, we need to restart the local database :
+```
+pg_ctl -D /home/hardiagon/mylocal_db start
+```
+where we provide after `-D` flag the path to the local database (use `verdi show profile <myprofile>` to retrieve this information).
+
+To restart the `rabbitmq` server :
+```
+rabbitmq-server -detached
+```
+
+To restart the daemon : 
+```
+verdi daemon start
+```
+
+Then one can check everything is working with `verdi status`.
