@@ -77,7 +77,7 @@ def run_raspa(cifpath,raspa_code,is_submit=True):
     #    run(builder)
     #    print("Submission test successful")
     #    print("In order to actually submit, add '--submit'")
-    print("-----")
+    #print("-----")
 
 
 @click.command("cli")
@@ -109,11 +109,10 @@ def cli(codelabel,inputpath,submit,num_max,verbose):
     # Counter for submitted jobs
     submitted_jobs = 0
 
-    # Initialize a local scheduler
-    #scheduler = DirectScheduler()
+    print("Submitting jobs ...")
 
     # Iterate over the CIF files
-    for cif_file in cif_files[:num_max]:
+    for i,cif_file in enumerate(cif_files[:num_max]):
         # Verbosity
         if verbose : print(f"Running EQeq on {cif_file}")
 
@@ -122,6 +121,7 @@ def cli(codelabel,inputpath,submit,num_max,verbose):
 
         # Increment the counter for submitted jobs
         submitted_jobs += 1
+        print(f"Completed: {100 * (i + 1) / num_max:.2f}%", end='\r')
 
     print(f"Submitted {submitted_jobs} jobs on the queue.")
 
