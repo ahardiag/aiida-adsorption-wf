@@ -1,0 +1,12 @@
+append_text: ''
+computer: curie
+default_calc_job_plugin: raspa
+description: Run a simulation with RASPA
+filepath_executable: /opt/raspa_v2.0.48/bin/simulate
+label: raspa_run
+prepend_text: 'export RASPA_DIR=/opt/raspa_v2.0.48
+
+  export DYLD_LIBRARY_PATH=${RASPA_DIR}/lib
+
+  export LD_LIBRARY_PATH=${RASPA_DIR}/lib'
+use_double_quotes: 'False'

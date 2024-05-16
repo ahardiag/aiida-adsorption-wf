@@ -1,0 +1,9 @@
+---
+label: "localhost_slurm"
+hostname: "localhost"
+transport: "core.local"
+scheduler: "core.slurm"
+work_dir: "/data/hardiagon/.aiida"
+mpirun_command: "mpirun -np {tot_num_mpiprocs}"
+mpiprocs_per_machine: "2"
+prepend_text: |
