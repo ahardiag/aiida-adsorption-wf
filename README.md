@@ -134,3 +134,14 @@ It might be a bit complicated to look for the data located in the database for a
 python scripts/calcjob2path.py
 ```
 You will need to enter your aiida (database) profile (see `verdi profile list`) and the PK, the index of your calculation process (e.g. found using `verdi process list`). It will return the absolute path where the remote data is stored (e.g. */data/hardiagon/.aiida/f7/9b/8e3b-dee2-4f0c-be99-45a2e47ccb21*)
+
+### Check number of CPUs used
+Before running the workflow, run this script in another terminal to follow the CPU usage : 
+```
+bash scripts/print_cpus_used.sh
+```
+After all your simulations have completed, plot the results : 
+```
+python scripts/plot_cpu_time.py ./cpu_usage.log
+```
+It only detects the number of CPUs that are busy with processes running the RASPA executable `simulate`.
