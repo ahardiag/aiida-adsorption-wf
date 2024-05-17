@@ -7,5 +7,5 @@ requirements.txt
 reset_database.sql
 trash/
 config/computer.yml
-src/EQeq_raspa_aiida/EQeq_raspa_aiida.egg-info/*
-src/EQeq_raspa_aiida/__pycache__/*
+src/aiida_raspa_EQeq.egg-info/*
+src/aiida_raspa_EQeq/__pycache__/*

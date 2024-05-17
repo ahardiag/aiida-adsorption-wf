@@ -4,7 +4,7 @@ from tqdm import tqdm
 from aiida import load_profile
 from aiida.orm import QueryBuilder
 from aiida.plugins import CalculationFactory
-from EQeq_raspa_aiida.calcjob2path import calcjob2path
+from aiida_raspa_EQeq.calcjob2path import calcjob2path
 
 ##################### PARAMETERS ##################################
 

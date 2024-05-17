@@ -4,7 +4,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(
-    name='EQeq_raspa_aiida',
+    name='aiida_raspa_EQeq',
     version='0.1',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
