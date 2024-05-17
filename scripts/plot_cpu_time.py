@@ -21,7 +21,7 @@ df.set_index('Timestamp', inplace=True)
 
 # Plot CPUs Used over time
 plt.figure(figsize=(10, 6))
-plt.plot(df['Minutes'], df['CPUs Used'], marker='o', linestyle='-', color='b')
+plt.plot(df['Minutes'], df['CPUs Used'], marker='.', linestyle='-', color='b')
 
 plt.xlabel('Minutes since start',fontsize=15)
 plt.ylabel('CPUs Used',fontsize=15)

@@ -6,7 +6,7 @@ threshold=10                # Threshold CPU usage to consider a CPU as "used"
 interval=5                  # Interval in seconds between checks
 log_file="./cpu_usage.log"  # Log file to store the CPU usage over time
 
-echo "Timestamp, CPUs Used" > "$log_file"
+echo "Timestamp,CPUs Used" > "$log_file"
 while true; do
     # Get the current date and time
     timestamp=$(date +"%Y-%m-%d %H:%M:%S")
