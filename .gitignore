@@ -1,9 +1,11 @@
 .log_20240325
 __pycache__/*
 cif/
-computer.yml
-example_EQeq.py
+cifs_output
+list_pk.csv
 requirements.txt
 reset_database.sql
-submit_test/
 trash/
+config/computer.yml
+src/EQeq_raspa_aiida/EQeq_raspa_aiida.egg-info/*
+src/EQeq_raspa_aiida/__pycache__/*
