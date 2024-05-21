@@ -1,0 +1,4 @@
+pytest
+aiida-raspa
+jupyterlab
+ipykernel

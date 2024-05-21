@@ -3,7 +3,6 @@ __pycache__/*
 cif/
 cifs_output
 list_pk.csv
-requirements.txt
 reset_database.sql
 trash/
 config/computer.yml
