@@ -8,3 +8,7 @@ trash/
 config/computer.yml
 src/aiida_raspa_EQeq.egg-info/*
 src/aiida_raspa_EQeq/__pycache__/*
+tests
+src/__pycache__/
+set_environment
+set_environment_fish

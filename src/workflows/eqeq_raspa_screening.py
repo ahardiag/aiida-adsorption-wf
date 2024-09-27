@@ -84,7 +84,7 @@ def run_raspa(cifpath,raspa_code,is_submit=True):
 @click.argument("codelabel")
 @click.option("--inputpath",required=True,type=str, help="Path directory to CIF database.")
 @click.option("--submit", is_flag=True, help="Submit simulations to the daemon.")
-@click.option("--num_max", default= 10, help="Maximal number of simulations")
+@click.option("--num_max", default= 1, help="Maximal number of structures to analyze - for testing purposes. Set to -1 to select the whole database")
 @click.option("--verbose", is_flag=True, help="verbosity")
 def cli(codelabel,inputpath,submit,num_max,verbose):
     """Click interface"""
