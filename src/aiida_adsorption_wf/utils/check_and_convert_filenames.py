@@ -59,12 +59,16 @@ def copy_and_rename_directory(source_directory, target_directory_suffix='_conver
 
     print(f'Number of filename converted in {source_directory+target_directory_suffix} : {count_modif}')
 
-# Directory to check
-source_directory = 'examples/subset-coremof/cif'
+def main():
+    # Directory to check
+    source_directory = 'examples/subset-coremof/cif'
 
-# Check filenames
-count_warn = check_filenames(source_directory)
-print(f'Number of uncorrected formatted text files : {count_warn}')
+    # Check filenames
+    count_warn = check_filenames(source_directory)
+    print(f'Number of uncorrected formatted text files : {count_warn}')
 
-# Create new valid directory
-copy_and_rename_directory(source_directory)
+    # Create new valid directory
+    copy_and_rename_directory(source_directory)
+
+if __name__ == '__main__':
+    main()

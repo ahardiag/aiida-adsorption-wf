@@ -13,7 +13,7 @@ conda create -n aiida python=3.11
 
 #### Python 
 ```
-pip install -r requirements.txt
+pip install -e .
 ```
 #### Slurm
 Installing and configuring Slurm scheduler on a local computer may be painful. We recommend to use SSH connections to a cluster node, where one can find a configured scheduler is installed (jean-zay:`slurm`, gricad:`oar`).
@@ -124,24 +124,24 @@ PartitionName=debug Nodes=localhost Default=YES MaxTime=INFINITE State=UP
 ### Cif name checker
 If you use as inputs CIF files with filenames using characters different from `_` and alphanumeric characters, the screening will fail. To fix that, one can copy and rename the problematic CIF filenames with :
 ```
-python scripts/check_and_convert_filenames.py
+check_and_convert_filenames
 ```
 The input set of CIF files must be present in `examples/cif/` and the output CIF files will be copied to  `examples/cif_converted/`.
 
 ### Visualize output data
 It might be a bit complicated to look for the data located in the database for a non-expert of Aiida, the following script allows to quickly identify the path directory of a specific calculation :
 ```
-python scripts/calcjob2path.py
+calcjob2path
 ```
 You will need to enter your aiida (database) profile (see `verdi profile list`) and the PK, the index of your calculation process (e.g. found using `verdi process list`). It will return the absolute path where the remote data is stored (e.g. */data/hardiagon/.aiida/f7/9b/8e3b-dee2-4f0c-be99-45a2e47ccb21*)
 
 ### Check number of CPUs used
 Before running the workflow, run this script in another terminal to follow the CPU usage : 
 ```
-bash scripts/print_cpus_used.sh
+print_cpus_used
 ```
 After all your simulations have completed, plot the results : 
 ```
-python scripts/plot_cpu_time.py ./cpu_usage.log
+plot_cpu_time ./cpu_usage.log
 ```
 It only detects the number of CPUs that are busy with processes running the RASPA executable `simulate`.

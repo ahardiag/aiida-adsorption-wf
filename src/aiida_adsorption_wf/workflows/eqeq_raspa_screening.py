@@ -86,7 +86,7 @@ def run_raspa(cifpath,raspa_code,is_submit=True):
 @click.option("--submit", is_flag=True, help="Submit simulations to the daemon.")
 @click.option("--num_max", default= 1, help="Maximal number of structures to analyze - for testing purposes. Set to -1 to select the whole database")
 @click.option("--verbose", is_flag=True, help="verbosity")
-def cli(codelabel,inputpath,submit,num_max,verbose):
+def main(codelabel,inputpath,submit,num_max,verbose):
     """Click interface"""
     try:
         code = Code.get_from_string(codelabel)
@@ -126,7 +126,7 @@ def cli(codelabel,inputpath,submit,num_max,verbose):
     print(f"Submitted {submitted_jobs} jobs on the queue.")
 
 if __name__ == "__main__":
-    cli()  # pylint: disable=no-value-for-parameter
+    main()  # pylint: disable=no-value-for-parameter
 
 # EOF
 

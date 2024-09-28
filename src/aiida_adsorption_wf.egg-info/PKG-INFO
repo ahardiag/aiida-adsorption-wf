@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: aiida-adsorption-wf
+Version: 0.1.0
+Summary: A librairies of workflows to study adsorption in materials screening.
+Author: Arthur Hardiagon
+Author-email: Arthur Hardiagon <arthur.hardiagon@chimieparistech.psl.eu>
+Requires-Dist: pytest
+Requires-Dist: aiida-raspa
+Requires-Dist: jupyterlab
+Requires-Dist: ipykernel

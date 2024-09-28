@@ -1,0 +1,6 @@
+[console_scripts]
+analyze_workflow = aiida_adsorption_wf.utils.analyze_workflow:main
+calcjob2path = aiida_adsorption_wf.utils.calcjob2path:main
+check_and_convert_filenames = aiida_adsorption_wf.utils.check_and_convert_filenames:main
+eqeq_raspa_screening = aiida_adsorption_wf.workflows.eqeq_raspa_screening:main
+plot_cpu_time = aiida_adsorption_wf.utils.plot_cpu_time:main

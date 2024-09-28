@@ -31,11 +31,13 @@ def calcjob2path(profile_name, calcjob_pk):
         return f"Error: No node found with PK {calcjob_pk} or it does not have a remote folder.", None
     except Exception as e:
         return f"An unexpected error occurred: {e}", None
-
-if __name__ == '__main__':
+def main():
     # Input the name of the AiiDA profile and the PK of the calculation job
     profile_name = input("Enter the name of the AiiDA profile: ")
     calcjob_pk = input("Enter the PK of the calculation job: ")
     
     path = calcjob2path(profile_name, calcjob_pk)
     print(f"Remote folder path: {path}")
+
+if __name__ == '__main__':
+    main()
